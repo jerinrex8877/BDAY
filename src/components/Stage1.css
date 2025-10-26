@@ -1,0 +1,163 @@
+
+.stage1-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 70% 10%, #fbace5 0%, #e74863 30%, #e7227e 100%), linear-gradient(110deg, #fa92c3 0%, #ffdde1 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Animated gradient overlay (optional) */
+/*
+@keyframes bgMove {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+.stage1-container {
+  background: linear-gradient(120deg, #fbc2eb 30%, #a18cd1 60%, #fbc2eb 100%);
+  background-size: 200% 200%;
+  animation: bgMove 14s ease-in-out infinite;
+}
+*/
+
+.stage1-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* Gradient headline text with radiant glow */
+.stage1-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(92deg, #fdadad 15%, #ff8fd4 70%, #9b5cff 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  text-shadow: 0 2px 5px #fff, 0 2px 5px #d51093b0;
+}
+
+.stage1-content p,
+.stage1-content p.message {
+  color: #f8faf8;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  text-shadow: 0 1px 10px #fff9, 0 2px 12px #ecb3ec;
+  animation: fadeIn 1s cubic-bezier(.77,0,.175,1);
+}
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-14px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  font-size: 32px;
+  animation: floatHeart 6s infinite ease-in-out;
+  z-index: 5;
+  user-select: none;
+  opacity: 0.9;
+  filter: drop-shadow(0px 0px 8px #92094d);
+}
+
+/* Floating animation */
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-180px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Position each heart in different areas */
+.heart-0  { top: 10%; left: 15%; animation-delay: 0.2s; }
+.heart-1  { top: 30%; left: 70%; animation-delay: 1s; }
+.heart-2  { top: 50%; left: 40%; animation-delay: 0.6s; }
+.heart-3  { top: 20%; left: 80%; animation-delay: 1.3s; }
+.heart-4  { top: 60%; left: 25%; animation-delay: 0.8s; }
+.heart-5  { top: 75%; left: 50%; animation-delay: 1.1s; }
+.heart-6  { top: 15%; left: 35%; animation-delay: 0.5s; }
+.heart-7  { top: 40%; left: 60%; animation-delay: 0.9s; }
+.heart-8  { top: 55%; left: 10%; animation-delay: 0.3s; }
+.heart-9  { top: 70%; left: 75%; animation-delay: 1.4s; }
+.heart-10 { top: 25%; left: 55%; animation-delay: 1.6s; }
+.heart-11 { top: 35%; left: 20%; animation-delay: 0.7s; }
+
+.heart:hover {
+  transform: scale(1.4);
+  filter: drop-shadow(0px 0px 12px #a00b7b);
+}
+
+
+
+/* Sparkle effect, keep your own or update as needed */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(ellipse at center, #ffffff 70%, #be8809 100%);
+  border-radius: 50%;
+  opacity: 0.88;
+  box-shadow: 0 0 12px 2px #fff7 1.1;
+  animation: sparkleAnim 2.8s infinite;
+  mix-blend-mode: screen;
+}
+@keyframes sparkleAnim {
+  0%   { transform: scale(0.7) rotate(0deg);   opacity: 0.5;}
+  45%  { transform: scale(1.4) rotate(40deg);  opacity: 1;}
+  80%  { transform: scale(0.5) rotate(-40deg); opacity: 0.7;}
+  100% { transform: scale(0.7) rotate(-1deg);  opacity: 0.3;}
+}
+/* Add your .sparkle-0 ... .sparkle-19 positions */
+
+.hidden-key {
+  position: absolute;
+  bottom: 18%;
+  right: 12%;
+  width: 45px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hidden-key:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.key-message {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ffb6c1;
+  animation: fadeIn 1s ease-in;
+}
+
+.heaven-door.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.6);
+}

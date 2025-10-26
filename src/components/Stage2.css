@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.stage2-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 70% 10%, #fbace5 0%, #e74863 30%, #e7227e 100%), linear-gradient(110deg, #fa92c3 0%, #ffdde1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  padding-top: 90px;
+}
+
+
+/* Top Bar */
+.top-bar {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ffe38b 0%, #f5e8cd 95%);
+  color: #bc8402;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.3rem;
+  font-weight: 700;
+  width: max-content;
+  padding: 0.7rem 2.8rem;
+  border-radius: 2.4rem;
+  box-shadow: 0 4px 30px #e7bf7e91;
+  letter-spacing: 1px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.22s, box-shadow 0.2s;
+}
+
+
+.top-bar:hover {
+  background: linear-gradient(90deg, #ffd873 0%, #ffe0b2 100%);
+  box-shadow: 0 0px 40px #ffe659c0;
+}
+
+
+/* Letter "paper" */
+.letter-paper {
+  margin-top: 120px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 50px #db30b244;
+  min-width: 240px;
+  max-width: 580px;
+  min-height: 120px;
+  width: 85vw;
+  padding: 2.2rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  /* Responsive vertical flexibility */
+  max-height: 56vh;
+  overflow: auto;
+  transition: max-height 0.4s cubic-bezier(.56,1.5,.59,0.79);
+}
+
+
+/* Gold handwriting text */
+.letter-text {
+  color: #e1b95c;
+  font-family: 'Dancing Script', cursive, 'Noto Sans Tamil', Arial, sans-serif;
+  font-size: 2.0rem;
+  font-style: italic;
+  letter-spacing: 1.08px;
+  text-shadow: 0 2px 13px #ffe765ad;
+  white-space: pre-line;
+  user-select: text;
+  padding: 0.7rem 0 0 0.14rem;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+
+/* Note message */
+.note-message {
+  color: #db9d00;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.1rem;
+  background: #fff9e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px #ffeaaa22;
+  padding: 0.8rem 1.5rem;
+  margin-top: 2.1rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+  width: max-content;
+  max-width: 90vw;
+}
+
+
+/* animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(35px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+.next-button {
+  margin-top: 24px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #ff9ac7, #fdb4db);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 12px #ffb6d8b3;
+  transition: all 0.3s ease;
+}
+
+.next-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff9ac7;
+}
